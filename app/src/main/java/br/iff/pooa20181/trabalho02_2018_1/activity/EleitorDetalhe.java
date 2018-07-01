@@ -10,10 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import br.iff.pooa20181.trabalho02_2018_1.R;
 import br.iff.pooa20181.trabalho02_2018_1.model.Eleitor;
 import io.realm.Realm;
@@ -35,12 +31,12 @@ public class EleitorDetalhe extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_eleitor_detalhe );
 
-        edNome = (EditText) findViewById( R.id.txtNomeEleitor );
-        edNome_mae = (EditText) findViewById( R.id.txtNomeMaeEleitor );
-        edData = (EditText) findViewById( R.id.txtDataEleitor );
-        edNumeroTitulo = (EditText) findViewById( R.id.txtNumeroTituloEleitor );
-        edZona = (EditText) findViewById( R.id.txtZonaEleitor );
-        edCidade = (EditText) findViewById( R.id.txtCidadeEleitor );
+        edNome = (EditText) findViewById( R.id.txtNomeCandidato );
+        edNome_mae = (EditText) findViewById( R.id.txtNomeMaeCandidato );
+        edData = (EditText) findViewById( R.id.txtNumeroUrna );
+        edNumeroTitulo = (EditText) findViewById( R.id.txtCargoCandidato );
+        edZona = (EditText) findViewById( R.id.txtVotosCandidato );
+        edCidade = (EditText) findViewById( R.id.txtCidadeCandidato );
         edSecao = (EditText) findViewById( R.id.txtSecaoEleitor );
 
         btnSalvar = (Button) findViewById( R.id.btnSalvar );
