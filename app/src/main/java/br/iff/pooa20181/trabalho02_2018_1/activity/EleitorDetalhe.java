@@ -28,7 +28,6 @@ public class EleitorDetalhe extends AppCompatActivity {
     Eleitor eleitor;
     private Realm realm;
 
-    SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -72,7 +71,7 @@ public class EleitorDetalhe extends AppCompatActivity {
             edNome.setText(eleitor.getNome());
             edNome_mae.setText(eleitor.getNome_mae());
             edNumeroTitulo.setText(eleitor.getNumero_titulo());
-            edData.setText(formato.format((Date) eleitor.getData_nascimento()));
+            edData.setText(eleitor.getData_nascimento());
             edSecao.setText(eleitor.getSecao_eleitoral());
             edZona.setText(eleitor.getZona_eleitoral());
             edCidade.setText(eleitor.getCidade());
@@ -140,7 +139,7 @@ public class EleitorDetalhe extends AppCompatActivity {
         realm.commitTransaction();
         realm.close();
 
-        Toast.makeText(this,"Eleitor cadastrado com successo",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Eleitor cadastrado!",Toast.LENGTH_LONG).show();
         this.finish();
 
     }
@@ -153,12 +152,9 @@ public class EleitorDetalhe extends AppCompatActivity {
         eleitor.setSecao_eleitoral(edSecao.getText().toString());
         eleitor.setZona_eleitoral(edZona.getText().toString());
         eleitor.setCidade(edCidade.getText().toString());
+        eleitor.setData_nascimento(edData.getText().toString());
 
-        try {
-            eleitor.setData_nascimento((Date) formato.parse(edData.getText().toString()));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
 
     }
 

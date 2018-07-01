@@ -12,7 +12,7 @@ public class Eleitor extends RealmObject implements Serializable{
     private int id;
     private String nome;
     private String nome_mae;
-    private Date data_nascimento;
+    private String data_nascimento;
     private String numero_titulo;
     private String zona_eleitoral;
     private String secao_eleitoral;
@@ -23,7 +23,7 @@ public class Eleitor extends RealmObject implements Serializable{
 
     }
 
-    public Eleitor(int id, String nome, String nome_mae, Date data_nascimento, String numero_titulo, String zona_eleitoral, String secao_eleitoral, String cidade){
+    public Eleitor(int id, String nome, String nome_mae, String data_nascimento, String numero_titulo, String zona_eleitoral, String secao_eleitoral, String cidade){
 
         this.id = id;
         this.nome = nome;
@@ -61,11 +61,11 @@ public class Eleitor extends RealmObject implements Serializable{
         this.nome_mae = nome_mae;
     }
 
-    public Date getData_nascimento() {
+    public String getData_nascimento() {
         return data_nascimento;
     }
 
-    public void setData_nascimento(Date data_nascimento) {
+    public void setData_nascimento(String data_nascimento) {
         this.data_nascimento = data_nascimento;
     }
 
