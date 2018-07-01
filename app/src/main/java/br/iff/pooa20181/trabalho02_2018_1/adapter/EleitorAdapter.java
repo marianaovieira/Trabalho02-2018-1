@@ -8,13 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
 import br.iff.pooa20181.trabalho02_2018_1.R;
 import br.iff.pooa20181.trabalho02_2018_1.model.Eleitor;
 
-public class EleitorAdapter extends RecicleView.Adapter {
+
+public class EleitorAdapter extends RecyclerView.Adapter {
 
     private List<Eleitor> eleitores;
     private Context context;
@@ -44,11 +46,13 @@ public class EleitorAdapter extends RecicleView.Adapter {
 
         Eleitor eleitor  = this.eleitores.get(position) ;
 
-        //define o que vai mostrar no cardview da lista
+
         eleitorHolder.nomeEleitor.setText(eleitor.getNome());
         eleitorHolder.numeroTitulo.setText(eleitor.getNumero_titulo());
         eleitorHolder.zonaEleitoral.setText(eleitor.getZona_eleitoral());
         eleitorHolder.secaoEleitoral.setText(eleitor.getSecao_eleitoral());
+
+
 
     }
 
@@ -67,7 +71,7 @@ public class EleitorAdapter extends RecicleView.Adapter {
         public EleitorViewHolder(View itemView) {
             super(itemView);
             nomeEleitor = (TextView) itemView.findViewById(R.id.tvNomeEleitor);
-            numeroTitulo = (TextView) itemView.findViewById(R.id.tvNumeroTitulo);
+            numeroTitulo = (TextView) itemView.findViewById(R.id.tvNumTitulo);
             zonaEleitoral = (TextView) itemView.findViewById(R.id.tvZonaEleitoral);
             secaoEleitoral = (TextView) itemView.findViewById(R.id.tvSecaoEleitoral);
 
@@ -82,6 +86,8 @@ public class EleitorAdapter extends RecicleView.Adapter {
 
         }
     }
+
+
 
 
 
