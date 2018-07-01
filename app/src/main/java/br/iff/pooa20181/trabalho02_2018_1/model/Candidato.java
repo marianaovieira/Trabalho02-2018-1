@@ -16,6 +16,10 @@ public class Candidato extends RealmObject implements Serializable {
     private String cidade;
     private String estado;
 
+    public Candidato(){
+
+    }
+
     public Candidato(String nome,String nome_mae, String numero_urna, String cargo, String numero_votos, String cidade, String estado){
 
         this.nome = nome;
@@ -84,8 +88,6 @@ public class Candidato extends RealmObject implements Serializable {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
-
 
 
 }
