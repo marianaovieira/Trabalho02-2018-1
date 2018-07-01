@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Trabalho02-2018-1</string>
+    <string name="title_activity_lista_eleitor">ListaEleitor</string>
 </resources>
