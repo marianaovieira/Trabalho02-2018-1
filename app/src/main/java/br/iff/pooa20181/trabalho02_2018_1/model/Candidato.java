@@ -9,7 +9,7 @@ public class Candidato extends RealmObject implements Serializable {
 
     @PrimaryKey
     private String nome;
-    private String nome_mae;
+    private String partido;
     private String numero_urna;
     private String cargo;
     private String numero_votos;
@@ -20,10 +20,10 @@ public class Candidato extends RealmObject implements Serializable {
 
     }
 
-    public Candidato(String nome,String nome_mae, String numero_urna, String cargo, String numero_votos, String cidade, String estado){
+    public Candidato(String nome,String partido, String numero_urna, String cargo, String numero_votos, String cidade, String estado){
 
         this.nome = nome;
-        this.nome_mae = nome_mae;
+        this.partido = partido;
         this.numero_urna = numero_urna;
         this.cargo = cargo;
         this.numero_votos = numero_votos;
@@ -41,12 +41,12 @@ public class Candidato extends RealmObject implements Serializable {
         this.nome = nome;
     }
 
-    public String getNome_mae() {
-        return nome_mae;
+    public String getPartido() {
+        return partido;
     }
 
-    public void setNome_mae(String nome_mae) {
-        this.nome_mae = nome_mae;
+    public void setPartido(String partido) {
+        this.partido = partido;
     }
 
     public String getNumero_urna() {
