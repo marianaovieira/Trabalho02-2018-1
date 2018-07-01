@@ -32,7 +32,7 @@ public class EleitorDetalhe extends AppCompatActivity {
         setContentView( R.layout.activity_eleitor_detalhe );
 
         edNome = (EditText) findViewById( R.id.txtNomeCandidato );
-        edNome_mae = (EditText) findViewById( R.id.txtNomeMaeCandidato );
+        edNome_mae = (EditText) findViewById( R.id.txtPartidoCandidato );
         edData = (EditText) findViewById( R.id.txtNumeroUrna );
         edNumeroTitulo = (EditText) findViewById( R.id.txtCargoCandidato );
         edZona = (EditText) findViewById( R.id.txtVotosCandidato );

@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvInstrucoes" />
 
     <EditText
-        android:id="@+id/txtNomeMaeCandidato"
+        android:id="@+id/txtPartidoCandidato"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -89,7 +89,7 @@
         android:hint="Data Nascimento"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomeMaeCandidato" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPartidoCandidato" />
 
     <EditText
         android:id="@+id/txtVotosCandidato"

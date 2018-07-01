@@ -51,14 +51,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tvInstrucoes" />
 
     <EditText
-        android:id="@+id/txtNomeMaeCandidato"
+        android:id="@+id/txtPartidoCandidato"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Nome da mãe "
+        android:hint="Partido Eleitoral"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
         android:hint="Número Urna"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomeMaeCandidato" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPartidoCandidato" />
 
     <EditText
         android:id="@+id/txtVotosCandidato"
