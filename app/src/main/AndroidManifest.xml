@@ -18,8 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ListaEleitor" />
-        <activity android:name=".EleitorDetalhe" />
-        <activity android:name=".ItemEleitor"></activity>
+        <activity android:name=".activity.EleitorDetalhe" />
+        <activity android:name=".activity.ItemEleitor" />
+        <activity android:name=".ContentListaEleitor"></activity>
     </application>
 
 </manifest>

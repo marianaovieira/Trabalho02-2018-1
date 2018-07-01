@@ -9,8 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 
-import br.iff.pooa20181.trabalho02_2018_1.EleitorDetalhe;
 import br.iff.pooa20181.trabalho02_2018_1.R;
+import br.iff.pooa20181.trabalho02_2018_1.adapter.EleitorAdapter;
 import io.realm.Realm;
 
 public class ListaEleitor extends AppCompatActivity {
@@ -38,7 +38,12 @@ public class ListaEleitor extends AppCompatActivity {
     }
 
     protected void onResume() {
+        super.onResume();
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.lista_eleitor);
 
+        recyclerView.setAdapter(new EleitorAdapter(getEleitores(),this,this));
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 

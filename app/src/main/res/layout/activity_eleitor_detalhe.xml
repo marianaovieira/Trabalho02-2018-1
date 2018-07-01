@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EleitorDetalhe">
+    tools:context=".activity.EleitorDetalhe">
 
     <TextView
         android:id="@+id/tvCadastro_Eleitor"

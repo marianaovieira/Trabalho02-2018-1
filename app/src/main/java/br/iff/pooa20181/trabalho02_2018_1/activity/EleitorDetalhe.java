@@ -1,4 +1,4 @@
-package br.iff.pooa20181.trabalho02_2018_1;
+package br.iff.pooa20181.trabalho02_2018_1.activity;
 
 import android.content.Intent;
 import android.os.Build;
@@ -14,6 +14,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import br.iff.pooa20181.trabalho02_2018_1.R;
 import br.iff.pooa20181.trabalho02_2018_1.model.Eleitor;
 import io.realm.Realm;
 
