@@ -49,7 +49,7 @@ public class CandidatoDetalhe extends AppCompatActivity {
 
         if(id != 0)
         {
-            //desativa o botão de salvar
+
             btnSalvar.setEnabled(false);
             btnSalvar.setClickable(false);
             btnSalvar.setVisibility(View.INVISIBLE);
@@ -58,7 +58,7 @@ public class CandidatoDetalhe extends AppCompatActivity {
             btnAlterar.setClickable(true);
             btnAlterar.setVisibility( View.VISIBLE);
 
-            //pega o primeiro candidato com o id passado entre as views
+
             candidato = realm.where(Candidato.class).equalTo("id",id).findFirst();
 
             edNomeCandidato.setText(candidato.getNome());

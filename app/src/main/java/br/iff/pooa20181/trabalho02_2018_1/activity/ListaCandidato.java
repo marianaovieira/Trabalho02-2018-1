@@ -12,10 +12,11 @@ import java.util.List;
 
 import br.iff.pooa20181.trabalho02_2018_1.R;
 import br.iff.pooa20181.trabalho02_2018_1.adapter.CandidatoAdapter;
+import br.iff.pooa20181.trabalho02_2018_1.adapter.ClickRecyclerViewListener;
 import br.iff.pooa20181.trabalho02_2018_1.model.Candidato;
 import io.realm.Realm;
 
-public class ListaCandidato extends AppCompatActivity {
+public class ListaCandidato extends AppCompatActivity implements ClickRecyclerViewListener {
 
     private Realm realm;
 
@@ -49,7 +50,7 @@ public class ListaCandidato extends AppCompatActivity {
 
     }
 
-    public List<Candidato> getEleitores(){
+    public List<Candidato> getCandidatos(){
 
         return (List) realm.where(Candidato.class).findAll();
 
@@ -57,9 +58,9 @@ public class ListaCandidato extends AppCompatActivity {
 
     @Override
     public void onClick(Object object) {
-        Candidato eleitor = (Candidato) object;
+        Candidato candidato = (Candidato) object;
         Intent intent = new Intent(ListaCandidato.this,CandidatoDetalhe.class);
-        intent.putExtra("id",eleitor.getId());
+        intent.putExtra("id",candidato.getId());
         startActivity(intent);
     }
 
