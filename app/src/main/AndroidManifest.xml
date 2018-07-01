@@ -20,7 +20,8 @@
         <activity android:name=".activity.ListaEleitor" />
         <activity android:name=".activity.EleitorDetalhe" />
         <activity android:name=".activity.ItemEleitor" />
-        <activity android:name=".activity.ContentListaEleitor"></activity>
+        <activity android:name=".activity.ContentListaEleitor" />
+        <activity android:name=".activity.ListaCandidato"></activity>
     </application>
 
 </manifest>
