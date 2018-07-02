@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.ListaCandidato">
 
-    <include layout="@layout/activity_item_candidato" />
+    <include layout="@layout/activity_content_lista_candidato" />
 
 
     <android.support.design.widget.FloatingActionButton
