@@ -13,7 +13,7 @@ public class BDConfig extends Application {
         Realm.init(getApplicationContext());
 
         RealmConfiguration.Builder builder = new RealmConfiguration.Builder();
-        builder.name("eleicao.realm");
+        builder.name("rentcontrol.realm");
         builder.schemaVersion(0);
         builder.deleteRealmIfMigrationNeeded();
         RealmConfiguration realmConfiguration = builder.build();

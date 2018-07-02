@@ -18,41 +18,35 @@ import br.iff.pooa20181.trabalho02_2018_1.model.Eleitor;
 import io.realm.Realm;
 
 public class ListaEleitor extends AppCompatActivity implements ClickRecyclerViewListener {
-
     private Realm realm;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_lista_eleitor );
-
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_lista_eleitor);
 
         realm = Realm.getDefaultInstance();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById( R.id.fab );
-        fab.setOnClickListener( new View.OnClickListener() {
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( ListaEleitor.this, EleitorDetalhe.class );
-
-                intent.putExtra( "id", 0 );
-                startActivity( intent );
+                Intent intent = new Intent(ListaEleitor.this,EleitorDetalhe.class);
+                intent.putExtra("id",0);
+                startActivity(intent);
             }
-        } );
-
-
+        });
     }
 
     protected void onResume() {
+
         super.onResume();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.lista_eleitor);
-        RecyclerView.LayoutManager layout = new LinearLayoutManager(this,
-                LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(layout);
+
         recyclerView.setAdapter(new EleitorAdapter(getEleitores(),this,this));
 
-    }
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+    }
 
     public List<Eleitor> getEleitores(){
 

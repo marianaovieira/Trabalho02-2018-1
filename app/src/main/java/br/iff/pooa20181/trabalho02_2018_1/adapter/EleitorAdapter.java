@@ -26,14 +26,14 @@ public class EleitorAdapter extends RecyclerView.Adapter {
     public EleitorAdapter(List<Eleitor> eleitores, Context context,ClickRecyclerViewListener clickRecyclerViewListener) {
         this.eleitores = eleitores;
         this.context = context;
-        EleitorAdapter.clickRecyclerViewListener = clickRecyclerViewListener;
+        this.clickRecyclerViewListener = clickRecyclerViewListener;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context)
-                .inflate( R.layout.activity_item_eleitor, parent, false);
+                .inflate(R.layout.activity_item_eleitor, parent, false);
         EleitorViewHolder eleitorViewHolder = new EleitorViewHolder(view);
         return eleitorViewHolder;
     }

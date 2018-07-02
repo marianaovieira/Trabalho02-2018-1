@@ -17,11 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ListaEleitor" />
         <activity android:name=".activity.EleitorDetalhe" />
         <activity android:name=".activity.ItemEleitor" />
         <activity android:name=".activity.ContentListaEleitor" />
         <activity android:name=".activity.ListaCandidato" />
+        <activity android:name=".activity.ListaEleitor" />
         <activity android:name=".activity.CandidatoDetalhe" />
         <activity android:name=".activity.ItemCandidato" />
         <activity android:name=".activity.ContentListaCandidato" />
