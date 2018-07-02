@@ -1,5 +1,6 @@
 package br.iff.pooa20181.trabalho02_2018_1.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -40,17 +41,21 @@ public class ListaCandidato extends AppCompatActivity implements ClickRecyclerVi
         } );
     }
 
+    Context context;
+
     protected void onResume() {
         super.onResume();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.lista_eleitor);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.lista_candidato);
+
 
         recyclerView.setAdapter(new CandidatoAdapter(getCandidatos(),this,this));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
     }
 
-    public List<Candidato> getCandidatos(){
+    public List getCandidatos(){
 
         return (List) realm.where(Candidato.class).findAll();
 

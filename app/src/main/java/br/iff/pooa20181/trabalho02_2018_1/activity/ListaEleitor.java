@@ -39,17 +39,20 @@ public class ListaEleitor extends AppCompatActivity implements ClickRecyclerView
                 startActivity( intent );
             }
         } );
+
+
     }
 
     protected void onResume() {
         super.onResume();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.lista_eleitor);
-
+        RecyclerView.LayoutManager layout = new LinearLayoutManager(this,
+                LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layout);
         recyclerView.setAdapter(new EleitorAdapter(getEleitores(),this,this));
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
     }
+
 
     public List<Eleitor> getEleitores(){
 
@@ -64,6 +67,8 @@ public class ListaEleitor extends AppCompatActivity implements ClickRecyclerView
         intent.putExtra("id",eleitor.getId());
         startActivity(intent);
     }
+
+
 
     public void finish(){
         super.finish();

@@ -23,7 +23,8 @@
         <activity android:name=".activity.ContentListaEleitor" />
         <activity android:name=".activity.ListaCandidato" />
         <activity android:name=".activity.CandidatoDetalhe" />
-        <activity android:name=".activity.ItemCandidato"></activity>
+        <activity android:name=".activity.ItemCandidato" />
+        <activity android:name=".activity.ContentListaCandidato" />
     </application>
 
 </manifest>

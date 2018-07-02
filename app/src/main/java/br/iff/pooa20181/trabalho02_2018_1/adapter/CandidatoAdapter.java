@@ -26,7 +26,7 @@ public class CandidatoAdapter extends RecyclerView.Adapter {
     public CandidatoAdapter(List<Candidato> candidatos, Context context, ClickRecyclerViewListener clickRecyclerViewListener) {
         this.candidatos = candidatos;
         this.context = context;
-        this.clickRecyclerViewListener = clickRecyclerViewListener;
+        CandidatoAdapter.clickRecyclerViewListener = clickRecyclerViewListener;
     }
 
     @Override
@@ -36,6 +36,7 @@ public class CandidatoAdapter extends RecyclerView.Adapter {
                 .inflate( activity_item_candidato, parent, false );
         CandidatoViewHolder candidatoViewHolder = new CandidatoViewHolder( view );
         return candidatoViewHolder;
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

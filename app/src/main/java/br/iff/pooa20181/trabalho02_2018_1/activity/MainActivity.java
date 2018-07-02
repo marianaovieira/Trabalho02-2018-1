@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /* btEleitor.setOnClickListener(new View.OnClickListener() {
+       btCandidato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), ListaCandidato.class);
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-     */
+
 
     }
     private Context getContext(){
